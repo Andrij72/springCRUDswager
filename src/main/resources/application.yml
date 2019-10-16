@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_test
+    username: postgres
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    properties.hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: update
+      temp.use_jdbc_metadata_defaults: false
+      show_sql: true
+      use_sql_comments: true
+      format_sql: true
+      #type: trace
+  ###########################################################
+  #flyway:
+    #enabled: true
+    #baseline-on-migrate: true
+    #out-of-order: true
+    #url: ${spring.datasource.url}
+    #user: postgres
+    #password: root
